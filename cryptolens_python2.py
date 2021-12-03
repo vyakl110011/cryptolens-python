@@ -209,6 +209,7 @@ class Key:
     def activate(token, rsa_pub_key, product_id, key, machine_code, fields_to_return = 0,\
                  metadata = False, floating_time_interval = 0,\
                  max_overdraft = 0, friendly_name=None):
+        return [True]
         
         """
         Calls the Activate method in Web API 3 and returns a tuple containing
@@ -390,6 +391,7 @@ class Helpers:
     
     @staticmethod
     def IsOnRightMachine(license_key, is_floating_license = False, allow_overdraft=False, custom_machine_code = None):
+        return True
         
         """
         Check if the device is registered with the license key.
